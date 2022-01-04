@@ -1,0 +1,42 @@
+@import '../../components/Style/Style.scss';
+
+#aboutBanner{
+    padding-top:15vh;
+    margin-bottom:5vh;
+    h1{
+        font-size: $lgFontSize;
+        font-weight: 300;
+        margin-bottom:2vh;
+        // .contact{
+        //     margin-top:4vh;
+        //     font-size:$smallFontSize;
+        // }
+        .enVersion{
+            padding-left: 1vh;
+        }
+    }
+    .jpVersion, .enVersion, h2{
+        font-size: $mediumFontSize;
+    }
+
+    h2{
+        line-height:4vh;
+    }
+}
+
+.aboutCV{
+    .cvBox{
+        margin-bottom: 3vh;
+        h3{
+            border-left:10px solid $grayColor;
+            padding-left: 1.5vw;
+            font-size: $smallFontSize;
+            font-weight: 400;
+        }
+        p{
+            padding-left: 1.5vw;
+            font-size: $smallFontSize;
+            line-height:3vh;
+        }
+    }
+}

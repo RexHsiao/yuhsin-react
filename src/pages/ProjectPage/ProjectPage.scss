@@ -1,0 +1,28 @@
+@import '../../components/Style/Style.scss';
+
+.secNav{
+    font-size: $smallFontSize;
+    padding-top:12vh;
+    li{
+        padding:3%;
+    }
+    li:hover{
+        cursor: pointer;
+        color: $blackColor;
+    }
+    .active{
+        font-weight:500;
+    }
+    #workMobileTitle{
+        display:none;
+        font-size: $smallFontSize;
+        color: $grayColor;
+        font-weight: 400;
+        margin-top:5%;
+        padding:2%;
+    }
+}
+
+.cards{
+    justify-content: space-between
+}

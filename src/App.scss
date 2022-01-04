@@ -1,18 +1,4 @@
-$grayColor: #444444;
-$lightGrayColor: #D6D5D5;
-$whiteColor: #ffffff;
-$blackColor: #000000;
-$bg_color: blueviolet;
-$mainColor: $grayColor;
-$lgFontSize: 2.3rem;
-$mediumFontSize:1.5rem;
-$smallFontSize:1rem;
-$xsFontSize:.8rem;
-$xxsFontSize:.7rem;
-$cardWidthLg: 380px;
-$cardHeightLg: 300px;
-$cardWidthSm: 300px;
-$cardHeightSm: 300px;
+@import '../src/components/Style/Style.scss';
 
     
 
@@ -35,4 +21,178 @@ $cardHeightSm: 300px;
 .contents{
     width:100%;
     padding-top: 13vh
+}
+
+.page{
+    display:none
+}
+
+.page--active{
+    display: inline
+}
+
+@media (max-width : 767px) {
+    *{
+        letter-spacing: 1px;
+    }
+    .mainNav{
+        #workMobile{
+            display:flex !important;
+        }
+        #workWeb{
+            display:none;
+        }
+    }
+    .secNav{
+        #workMobileTitle{
+            display:inline;
+        }
+        li{
+            display:none;
+        }
+    }
+    #homeBanner{
+        background-image: url('./assets/images/home_banner_2.jpg');
+        h1{
+            font-size: $mediumFontSize;
+            .jpVersion, .enVersion{
+                font-size: $smallFontSize;
+            }
+            .enVersion {
+                padding-left: 10px;
+            }
+        }
+        h2{
+            line-height: 8vh;
+            top:64%;
+            span{
+                font-size: $smallFontSize;
+                color:$whiteColor;
+                font-weight:400;
+            }
+            a{
+                color: $whiteColor;
+            }
+        }
+    }
+    #homeCards{
+        // padding-top:12vh;
+        .card{
+            width: $cardWidthSm;
+            // height: $cardHeightSm;
+            .card-name{
+                h2{
+                 font-size: $xsFontSize;
+                }
+            }
+        }
+    }
+    #aboutBanner{
+        h1{
+            font-size: $mediumFontSize;
+        }
+        .jpVersion, .enVersion, h2{
+            font-size: $xsFontSize;
+        }
+    }
+    .aboutCV{
+        .cvBox{
+            h3{
+                border-left:8px solid $grayColor;
+                padding-left: 2vw;
+                font-size: $smallFontSize;
+            }
+            p{
+                padding-left: 4vw;
+                font-size: $xxsFontSize;
+                line-height:3vh;
+            }
+        }
+    }
+    .workContent{
+        .guide{
+            font-size: $xxsFontSize;
+        }
+        .projectTitle{
+            h2{
+                font-size: $xsFontSize;
+            }
+            p{
+                font-size: $xxsFontSize;
+            }
+            .workTitle{
+                h1{
+                    font-size: $mediumFontSize;
+                }
+                p{
+                    font-size: $xsFontSize;
+                }
+            }
+        }
+        .workImg{
+            width:90%;
+        }
+        .workOtherImgs{
+            p{
+                font-size: $xxsFontSize;
+            }
+        }
+        .workDetail2{
+            padding-top:5%;
+            line-height:2vh;
+            font-size: $xxsFontSize;
+        }
+    }
+}
+@media (max-width : 1200px) {
+    #homeBanner{
+        background-image: url('./assets/images/home_banner_2.jpg');
+        h2{
+            top:64%;
+            line-height: 5vw;
+        }
+    }
+}
+@media (max-height: 380px) and (max-width : 900px){
+    #homeBanner{
+        h1{
+            top:23%;
+            font-size: $mediumFontSize;
+            .jpVersion, .enVersion{
+                font-size: $smallFontSize;
+            }
+        }
+        h2{
+            line-height: 6vh;
+            top:30%;
+            span{
+                font-size: $smallFontSize;
+                color: $mainColor;
+                font-weight:300;
+            }
+            a{
+                color: $mainColor;
+            }
+        }
+    }
+    .mainNav{
+        height:15vh;
+        li{
+            transform: translateY(-50%);
+            a{
+                font-size: $xsFontSize;
+            }
+        }
+    }
+    #aboutBanner{
+        h1{
+            font-size: $mediumFontSize;
+        }
+        .jpVersion, .enVersion, h2{
+            font-size: $smallFontSize;
+        }
+        h2{
+            line-height:8vh;
+        }
+    }
 }
