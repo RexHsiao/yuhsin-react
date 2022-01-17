@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/yuhsin-react/static/css/main.fb33ba33.css",
+    "main.js": "/yuhsin-react/static/js/main.76a275fb.js",
+    "static/js/787.cfd8f164.chunk.js": "/yuhsin-react/static/js/787.cfd8f164.chunk.js",
+    "static/media/home_banner_2.jpg": "/yuhsin-react/static/media/home_banner_2.e908fd577f4b031317f2.jpg",
+    "static/media/home_banner.jpg": "/yuhsin-react/static/media/home_banner.d89c42a5b0204268aa83.jpg",
+    "index.html": "/yuhsin-react/index.html",
+    "main.fb33ba33.css.map": "/yuhsin-react/static/css/main.fb33ba33.css.map",
+    "main.76a275fb.js.map": "/yuhsin-react/static/js/main.76a275fb.js.map",
+    "787.cfd8f164.chunk.js.map": "/yuhsin-react/static/js/787.cfd8f164.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb33ba33.css",
+    "static/js/main.76a275fb.js"
+  ]
+}
