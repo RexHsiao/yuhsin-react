@@ -1,7 +1,7 @@
 import './Page.scss'
 
 const Page = ({active, children}) => (
-    <div className={`page ${ active && 'page--active'}`}>
+    <div className='page'>
         {children}
     </div>
 );

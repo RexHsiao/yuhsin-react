@@ -1,11 +1,6 @@
 import './HomePage.scss'
-import Page from '../../components/Page'
 
-const HomePage = ({
-    currentActivePage
-}) => (
-    <Page 
-        active={currentActivePage === 'HOME'}>
+const HomePage = () => (
     <div id="homeBanner">
         <h1>
             蕭雨軒 <span className="enVersion">Hsiao Yu-Hsin</span><br /><span className="jpVersion">ショウ　ウケン</span>
@@ -18,7 +13,6 @@ const HomePage = ({
             <a href="about.html">LEARN MORE</a>
         </h2>
     </div>
-    </Page>
 );
 
 export default HomePage;

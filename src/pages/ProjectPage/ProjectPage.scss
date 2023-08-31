@@ -2,7 +2,10 @@
 
 .secNav{
     font-size: $smallFontSize;
-    padding-top:12vh;
+    padding-top:150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     li{
         padding:3%;
     }
@@ -23,6 +26,15 @@
     }
 }
 
-.cards{
-    justify-content: space-between
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .cards{
+        width: 88vw;
+        display: flex;
+        padding: 3%;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
 }

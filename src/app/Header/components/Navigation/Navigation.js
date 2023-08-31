@@ -1,30 +1,29 @@
 import './Navigation.scss';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Item from './components/Item'
+import { Link, useLocation } from 'react-router-dom';
 
-const Navigation = ({
-    currentActivePage,
-    setCurrentActivePage
-}) => {
+const Navigation = () => {
+    const location = useLocation();
     return(
         <div>
-            <ul className="nav mb-lg-2 justify-content-center container-fluid mainNav" id="nav">
+            <ul className="nav mainNav" id="nav">
                 <Item 
-                    onClick={() => setCurrentActivePage('WORK')}
-                    active={currentActivePage === 'WORK'}
+                    onClick={() => {}}
+                    active={location.pathname.substring(0,6) === '/works'}
                     itemName="workWeb"
                 >
-                    WORK
+                    <Link to="/works">
+                        WORK
+                    </Link>
                 </Item>
                 <Item 
-                    onClick={() => setCurrentActivePage("WORK")}
-                    active={currentActivePage === 'WORK'}
+                    active={location.pathname === '/works'}
                     itemName="workMobile"
                     href="/work"
                     classNames="btn-group d-flex"
                     linkClass="dropdown-toggle"
                     others={
-                        <ul class="dropdown-menu">
+                        <ul className="dropdown-menu">
                             <Item 
                                 href="#"
                                 value="1"
@@ -56,21 +55,21 @@ const Navigation = ({
                         </ul>
                     }
                 >
-                    WORK
+                    <Link to="/works">
+                        WORK
+                    </Link>
                 </Item>
                 <Item 
-                    onClick={() => setCurrentActivePage("HOME")}
-                    active={currentActivePage === 'HOME'}
+                    active={location.pathname === '/'}
                     itemName="home"
                 >
-                    HYH
+                    <Link to="/">HYH</Link>
                 </Item>
-                <Item 
-                    onClick={() => setCurrentActivePage("ABOUT")}
-                    active={currentActivePage === 'ABOUT'}
+                <Item
+                    active={location.pathname === '/about'}
                     itemName="about"
                 >
-                    ABOUT
+                    <Link to="/about">ABOUT</Link>
                 </Item>
             </ul>
         </div>

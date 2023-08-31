@@ -1,33 +1,25 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './Item.scss';
 
 const Item = ({
-    currentActivePage,
     itemName, 
     classNames,
     linkClass, 
     value, 
-    active, 
-    href, 
-    children, 
-    onClick,
-    others}) => (
-    <li 
-        className={`nav-item ${classNames} ${active && 'nav-item-active'}`} 
-        value={value} 
-        id={itemName}>
-        <a 
-            className={`nav-link ${linkClass}`} 
-            aria-current="page" 
-            href={href}
-            onClick={(event) => {
-                event.preventDefault();
-                onClick();
-            }}
-        >
-            {children}
-        </a>
-        {others}
-    </li>
-);
+    active,
+    children,
+    others
+}) => {
+    return (
+        <li 
+            className={`nav-item ${classNames} ${active && 'nav-item-active'}`} 
+            value={value} 
+            id={itemName}>
+            <div className={`nav-link ${linkClass}`}>
+                {children}
+            </div>
+            {others}
+        </li>
+    )
+};
 
 export default Item;
